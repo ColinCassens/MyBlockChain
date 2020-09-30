@@ -65,6 +65,9 @@ class BlockChain:
         self.transactions_offChain = []
         return block.index
 
+    def add_transaction(self, transaction):
+        self.transactions_offChain.append(transaction)
+
     @property
     def last_block(self):
         return self.chain[-1]
